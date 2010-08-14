@@ -19,21 +19,16 @@ h2. Plugin Usage
 
 The Tweet Button plugin uses all of Twitter's possible parameters as of Aug 14, 2010. The easiest way to use the button is to simply add the standard tag to your template.
 
-<pre><code>
-{exp:tweet_button}
-</pre></code>
+<pre><code>{exp:tweet_button}</pre></code>
 
 Using the tag without any parameters will output the following HTML:
 
-<pre><code>
-<a href="http://twitter.com/share" class="twitter-share-button">Tweet</a>
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-</pre></code>
+<pre><code><a href="http://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></pre></code>
 
 Here is a list of the available parameters for the plugin:
 
-<pre><code>
-{exp:tweet_button
+<pre><code>{exp:tweet_button
 	class=""
 	count=""
 	via=""
@@ -45,8 +40,7 @@ Here is a list of the available parameters for the plugin:
 	exclude_js=""
 	wrap_a=""
 	anchor_text=""
-}
-</pre></code>
+}</pre></code>
 
 h3. Parameter Breakdown
 
@@ -139,11 +133,9 @@ h4. wrap_a=""
 
 If you need to wrap your anchor tag for custom style or javascript reasons you can add the tag here. You can also assign parameters if necessary. Here are a few examples:
 
-<pre><code>
-{exp:tweet_button wrap_a="div"}
+<pre><code>{exp:tweet_button wrap_a="div"}
 or
-{exp:tweet_button wrap_a="div id='post-tweet-button'"}
-</code></pre>
+{exp:tweet_button wrap_a="div id='post-tweet-button'"}</code></pre>
 
 
 h4. anchor_text=""
@@ -154,12 +146,10 @@ h4. anchor_text=""
 
 You can customize the text of your tweet with this parameter. If you don't want to use the default "Tweet" you can change it here.
 
-<pre><code>
-{exp:tweet_button anchor_text="Tweet This!"}
+<pre><code>{exp:tweet_button anchor_text="Tweet This!"}
 would output:
 <a href="http://twitter.com/share" class="twitter-share-button">Tweet This!</a>
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-</code></pre>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></code></pre>
 
 
 h3. Adding JS Separately
@@ -168,13 +158,9 @@ You may need to add the javascript reference apart from the Tweet Button itself.
 
 The Tweet Button plugin has an additional tag to add the JS alone. You can use it anywhere you like. We suggest the bottom of your HTML document.
 
-<pre><code>
-{exp:tweet_button:js}
-</pre></code>
+<pre><code>{exp:tweet_button:js}</pre></code>
 would simply output:
-<pre><code>
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-</code></pre>
+<pre><code><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></code></pre>
 
 
 
