@@ -23,13 +23,13 @@ h2. Plugin Usage
 
 The Tweet Button plugin uses all of Twitter's possible parameters as of Aug 14, 2010. The easiest way to use the button is to simply add the standard tag to your template.
 
-<pre><code>{exp:tweet_button}</pre></code>
+<pre><code>{exp:tweet_button}</code></pre>
 
 
 Using the tag without any parameters will output the following HTML:
 
 <pre><code><a href="http://twitter.com/share" class="twitter-share-button">Tweet</a>
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></pre></code>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></code></pre>
 
 
 Here is a list of the available parameters for the plugin:
@@ -165,7 +165,7 @@ You may need to add the javascript reference apart from the Tweet Button itself.
 
 The Tweet Button plugin has an additional tag to add the JS alone. You can use it anywhere you like. We suggest the bottom of your HTML document.
 
-<pre><code>{exp:tweet_button:js}</pre></code>
+<pre><code>{exp:tweet_button:js}</code></pre>
 
 would simply output:
 
