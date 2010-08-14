@@ -1,0 +1,185 @@
+h1. Tweet Button
+
+Tweet Button is an ExpressionEngine plugin that allows you to easily add "Twitter's official Tweet Button":http://twitter.com/goodies/tweetbutton to your EE templates. Brought to you by "Focus Lab, LLC":http://focuslabllc.com
+
+For questions regarding Twitter's Tweet Button check out their "Tweet Button FAQ":http://dev.twitter.com/pages/tweet_button_faq.
+
+h2. Installation
+
+*For ExpressionEngine 1.x*
+
+* Copy the <code>tweet_button/pi.tweet_button.php</code> file to your <code>system/plugins</code> directory
+
+*For ExpressionEngine 2.x*
+
+* Copy the <code>tweet_button</code> directory to your <code>system/expressionengine/third_party</code> directory>
+
+
+h2. Plugin Usage
+
+The Tweet Button plugin uses all of Twitter's possible parameters as of Aug 14, 2010. The easiest way to use the button is to simply add the standard tag to your template.
+
+<pre><code>
+{exp:tweet_button}
+</pre></code>
+
+Using the tag without any parameters will output the following HTML:
+
+<pre><code>
+<a href="http://twitter.com/share" class="twitter-share-button">Tweet</a>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</pre></code>
+
+Here is a list of the available parameters for the plugin:
+
+<pre><code>
+{exp:tweet_button
+	class=""
+	count=""
+	via=""
+	related=""
+	related_description=""
+	tweet_text=""
+	url=""
+	lang=""
+	exclude_js=""
+	wrap_a=""
+	anchor_text=""
+}
+</pre></code>
+
+h3. Parameter Breakdown
+
+h4. class=""
+
+* *Defined*: the CSS class attribute added to your anchor tag
+* *Options*: any compliant CSS class name
+* *Default*: "twitter-share-button"
+
+This is simply your CSS class. You can make it whatever you'd like. Twitter will, by default, be looking for "twitter-share-button" to apply the style and javascript from their <code>widgets.js</code> file.
+
+
+h4. count=""
+
+* *Defined*: the position of the Tweet count
+* *Options*: "none", "horizontal" or "vertical"
+* *Default*: "horizontal"
+
+This determines the location of the Tweet count on the Tweet Button. By default Twitter displays it horizontally. You can optionally make it vertical or even hide the count all together. "Examples of count positions":http://dev.twitter.com/pages/tweet_button#positioning-the-count-box
+
+
+h4. via=""
+
+* *Defined*: automatically adds a "via @username" to your tweet
+* *Options*: any Twitter username
+* *Default*: not used
+
+If you want to add a "via @username" to your Tweet you simply add the username here.
+
+
+h4. related=""
+
+* *Defined*: a related Twitter account to the "via" account used
+* *Options*: any Twitter username
+* *Default*: not used
+
+You can suggest an additional Twitter account to follow once the user tweets the page. This is the Twitter account of the suggested user.
+
+
+h4. related_description=""
+
+* *Defined*: a brief description of the related="" Twitter account
+* *Options*: any plain text string
+* *Default*: not used
+
+*If you supply the related="" parameter* you can optionally give a description of that Twitter account.
+
+
+h4. tweet_text=""
+
+* *Defined*: automatically added text to the tweet
+* *Options*: any short plain text string
+* *Default*: not used
+
+This text is automatically prepended to the Tweet when a user clicks your Tweet Button. Keep in mind that tweets are less than or equal to 140 characters *and* Twitter will be adding a link and other potential parameters you pass the button.
+
+
+h4. url=""
+
+* *Defined*: force a URL to be shortened in the tweet
+* *Options*: any valid URL
+* *Default*: HTTP referrer (the URL of the Tweet Button)
+
+If left blank this URL will be the page on which the Tweet Button was clicked. You can specify a URL here if you prefer.
+
+
+h4. lang=""
+
+* *Defined*: change the language of the Tweet Button
+* *Options*: blank, "en", "fr", "de", "es", or "ja"
+* *Default*: not used (assumed to be "en")
+
+Twitter lets you change the language of the button and the popup window. The only language references I found in the Twitter documentation referenced English, French, German, Spanish and Japanese. There may be more available languages but they weren't listed if so.
+
+
+h4. exclude_js=""
+
+* *Defined*: opt to exclude the javascript reference
+* *Options*: "n" or "y"
+* *Default*: "n"
+
+You may optionally choose to add your javascript reference apart from the Tweet Button. If you set this parameter to "n" you can add the javascript yourself or use the <code>{exp:tweet_button:js}</code> tag elsewhere (see reference below). If you need to use multiple tweet buttons on a single page you need to set this parameter to "n".
+
+
+h4. wrap_a=""
+
+* *Defined*: wrap your anchor tag with a custom tag
+* *Options*: any valid HTML tag
+* *Default*: not used
+
+If you need to wrap your anchor tag for custom style or javascript reasons you can add the tag here. You can also assign parameters if necessary. Here are a few examples:
+
+<pre><code>
+{exp:tweet_button wrap_a="div"}
+or
+{exp:tweet_button wrap_a="div id='post-tweet-button'"}
+</code></pre>
+
+
+h4. anchor_text=""
+
+* *Defined*: the text of your Tweet Button anchor
+* *Options*: any string
+* *Default*: "Tweet"
+
+You can customize the text of your tweet with this parameter. If you don't want to use the default "Tweet" you can change it here.
+
+<pre><code>
+{exp:tweet_button anchor_text="Tweet This!"}
+would output:
+<a href="http://twitter.com/share" class="twitter-share-button">Tweet This!</a>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</code></pre>
+
+
+h3. Adding JS Separately
+
+You may need to add the javascript reference apart from the Tweet Button itself. An example of this would be any page on which you have multiple tweet buttons.
+
+The Tweet Button plugin has an additional tag to add the JS alone. You can use it anywhere you like. We suggest the bottom of your HTML document.
+
+<pre><code>
+{exp:tweet_button:js}
+</pre></code>
+would simply output:
+<pre><code>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</code></pre>
+
+
+
+h2. Change Log
+
++*Aug 14, 2010: 1.0.0*+
+
+* Initial Release

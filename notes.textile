@@ -1,0 +1,3 @@
+Finished with homepage options (http://twitter.com/goodies/tweetbutton)
+
+Now to: http://dev.twitter.com/pages/tweet_button
