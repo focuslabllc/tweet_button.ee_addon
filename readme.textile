@@ -46,7 +46,7 @@ Here is a list of the available parameters for the plugin:
 	exclude_js=""
 	wrap_a=""
 	anchor_text=""
-}</pre></code>
+}</code></pre>
 
 
 h3. Parameter Breakdown
