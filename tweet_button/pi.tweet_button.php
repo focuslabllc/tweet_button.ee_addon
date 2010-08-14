@@ -169,6 +169,9 @@ class Tweet_button
 		ob_start(); 
 ?>
 
+Docs will be available after official release. Until then please review the documentation on GitHub available here:
+
+http://github.com/focuslab/tweet_button.ee_addon
 
 <?php
 		$buffer         = ob_get_contents();
