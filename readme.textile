@@ -4,6 +4,10 @@ Tweet Button is an ExpressionEngine plugin that allows you to easily add "Twitte
 
 For questions regarding Twitter's Tweet Button check out their "Tweet Button FAQ":http://dev.twitter.com/pages/tweet_button_faq.
 
+h2. Compatibility
+
+This plugin works with both ExpressionEngine 1.x and 2.x branches.
+
 h2. Installation
 
 *For ExpressionEngine 1.x*
@@ -163,8 +167,8 @@ The Tweet Button plugin has an additional tag to add the JS alone. You can use i
 
 <pre><code>{exp:tweet_button:js}</pre></code>
 
-
 would simply output:
+
 <pre><code><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></code></pre>
 
 
@@ -173,4 +177,4 @@ h2. Change Log
 
 +*Aug 14, 2010: 1.0.0*+
 
-* Initial Release
+* Initial Release [to GitHub]
