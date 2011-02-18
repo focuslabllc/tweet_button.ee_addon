@@ -28,23 +28,23 @@ $plugin_info       = array(
 class Tweet_button
 {
 	
-	var $return_data    = '';
-	var $html           = '';
-	var $TMPL           = NULL;
+	public $return_data    = '';
+	public $html           = '';
+	public $TMPL           = NULL;
 	
 	// Set our default values
-	var $class          = 'twitter-share-button';
-	var $count          = FALSE;
-	var $via            = FALSE;
-	var $related        = FALSE;
-	var $related_desc   = FALSE;
-	var $tweet_text     = FALSE;
-	var $url            = FALSE;
-	var $lang           = FALSE;
-	var $exclude_js     = FALSE;
-	var $wrap_a         = FALSE;
-	var $anchor_text    = 'Tweet';
-	var $js             = '<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
+	public $class          = 'twitter-share-button';
+	public $count          = FALSE;
+	public $via            = FALSE;
+	public $related        = FALSE;
+	public $related_desc   = FALSE;
+	public $tweet_text     = FALSE;
+	public $url            = FALSE;
+	public $lang           = FALSE;
+	public $exclude_js     = FALSE;
+	public $wrap_a         = FALSE;
+	public $anchor_text    = 'Tweet';
+	public $js             = '<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
 	
 	
 	/**
@@ -53,7 +53,7 @@ class Tweet_button
 	 *
 	 * @return		string
 	 */
-	function Tweet_button()
+	public function Tweet_button()
 	{
 		
 		// Check to see what version of EE we're using. We reference the TMPL class appropriately based on the version
@@ -149,7 +149,7 @@ class Tweet_button
 	 *
 	 * @return		string
 	 */
-	function js()
+	public function js()
 	{
 		return $this->js;
 	}
@@ -164,14 +164,14 @@ class Tweet_button
 	// This function describes how the plugin is used.
 	//  Make sure and use output buffering
 	
-	function usage()
+	public function usage()
 	{
 		ob_start(); 
 ?>
 
 Docs will be available after official release. Until then please review the documentation on GitHub available here:
 
-http://github.com/focuslab/tweet_button.ee_addon
+http://github.com/focuslabllc/tweet_button.ee_addon
 
 <?php
 		$buffer         = ob_get_contents();
