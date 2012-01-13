@@ -129,7 +129,7 @@ h4. exclude_js=""
 * *Options*: "n" or "y"
 * *Default*: "n"
 
-You may optionally choose to add your javascript reference apart from the Tweet Button. If you set this parameter to "n" you can add the javascript yourself or use the <code>{exp:tweet_button:js}</code> tag elsewhere (see reference below). If you need to use multiple tweet buttons on a single page you need to set this parameter to "n".
+You may optionally choose to add your javascript reference apart from the Tweet Button. If you set this parameter to "y" you can add the javascript yourself or use the <code>{exp:tweet_button:js}</code> tag elsewhere (see reference below). If you need to use multiple tweet buttons on a single page you should set this parameter to "y".
 
 
 h4. wrap_a=""
